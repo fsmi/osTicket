@@ -1014,7 +1014,7 @@ extends SavedSearch {
         return $this->ht['staff_id'] == $staff->getId();
     }
 
-    function checkAccess($staff) {
+    function checkAccess(Staff $staff) {
         return true;
     }
 
@@ -1433,7 +1433,7 @@ class TeamSelectionField extends AdvancedSearchSelectionField {
         return parent::getSearchQ($method, $value, $name);
     }
 
-    function getSortKeys() {
+    function getSortKeys($path = '') {
         return array('team__name');
     }
 
